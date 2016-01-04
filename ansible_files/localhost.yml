@@ -2,3 +2,49 @@
   connection: local
   gather_facts: no
   sudo: no
+  vars:
+    homebrew_taps:
+      - caskroom/cask
+    homebrew_packages:
+      - { name: git }
+      - { name: mysql }
+      - { name: rbenv }
+      - { name: ruby-build }
+    homebrew_cask_packages:
+      - { name: 1password }
+      - { name: appcleaner }
+      - { name: atom }
+      - { name: caffeine }
+      - { name: dash }
+      - { name: dropbox }
+      - { name: evernote }
+      - { name: flux }
+      - { name: google-chrome }
+      - { name: hub }
+      - { name: iterm2 }
+      - { name: mailbox }
+      - { name: sequel-pro }
+      - { name: skitch }
+      - { name: skype }
+      - { name: slack }
+      - { name: vagrant }
+      - { name: virtualbox }
+
+  tasks:
+    - name: tap homebrew repositories
+      homebrew_tap: tap={{ item }} state=present
+      with_items: homebrew_taps
+
+    - name: update homebrew
+      homebrew: update_homebrew=yes
+
+    - name: install brew packages
+      homebrew: name={{ item.name }} state={{ item.state | default('latest') }} install_options={{ item.install_options | default() }}
+      with_items: homebrew_packages
+
+    - name: install homebrew-cask
+      homebrew: name=brew-cask state=latest
+
+    - name: install brew cask packages
+      homebrew_cask: name={{ item.name }} state={{ item.state | default('installed') }}
+      with_items: homebrew_cask_packages
