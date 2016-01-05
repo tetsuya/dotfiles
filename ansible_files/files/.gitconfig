@@ -6,3 +6,5 @@
   syncm = !git co master && git pull --rebase origin master && git fetch -p origin && git branch -d $(git branch --merged | grep -v master | grep -v '*')
   syncd = !git co develop && git pull --rebase origin develop && git fetch -p origin && git branch -d $(git branch --merged | grep -v develop | grep -v '*')
   ls = log --name-status --pretty=fuller
+[credential]
+  helper = osxkeychain
