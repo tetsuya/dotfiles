@@ -4,6 +4,7 @@
   sudo: no
   vars:
     homebrew_taps:
+      - homebrew/services
       - caskroom/cask
     homebrew_packages:
       - { name: git }
@@ -48,6 +49,9 @@
     - name: install brew cask packages
       homebrew_cask: name={{ item.name }} state={{ item.state | default('installed') }}
       with_items: homebrew_cask_packages
+
+    - name: start mysql at login
+      shell: brew services start mysql
 
     - name: copy .bash_aliases
       copy: src=./files/.bash_aliases dest=~/.bash_aliases
