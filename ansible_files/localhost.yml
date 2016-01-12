@@ -21,6 +21,7 @@
       - { name: evernote }
       - { name: flux }
       - { name: google-chrome }
+      - { name: google-drive }
       - { name: hub }
       - { name: iterm2 }
       - { name: mailbox }
