@@ -81,3 +81,35 @@
     - name: load dotfile settings
       shell: source ~/.bash_profile
       when: dot_bash_aliases.changed or dot_bash_exports.changed or dot_bash_profile.changed or dot_bash_prompt.changed or dot_gitconfig.changed or dot_inputrc.changed
+
+    - name: Set computer name (as done via System Preferences → Sharing)
+      sudo: yes
+      command: "{{ item }}"
+      with_items:
+        - scutil --set ComputerName "mbp"
+        - scutil --set HostName "mbp"
+        - scutil --set LocalHostName "mbp"
+
+    - name: enable tap to click for this user and for the login screen
+      shell: "{{ item }}"
+      with_items:
+        - defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+        - defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+        - defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+    - name: map bottom right corner to right-click
+      shell: "{{ item }}"
+      with_items:
+        - defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
+        - defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
+        - defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
+        - defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
+
+    - name: automatically hide and show the Dock
+      shell: defaults write com.apple.dock autohide -bool true
+
+    - name: disable the drop-shadow on screenshots
+      shell: "{{ item }}"
+      with_items:
+        - defaults write com.apple.screencapture disable-shadow -bool true
+        - killall SystemUIServer
