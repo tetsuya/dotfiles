@@ -1,0 +1,46 @@
+---
+- name: tap homebrew repositories
+  homebrew_tap: tap={{ item }} state=present
+  with_items:
+    - homebrew/services
+    - caskroom/cask
+
+- name: update homebrew
+  homebrew: update_homebrew=yes upgrade_all=yes
+
+- name: install brew packages
+  homebrew: name={{ item.name }} state={{ item.state | default('latest') }} install_options={{ item.install_options | default() }}
+  with_items:
+    - { name: git }
+    - { name: mysql }
+    - { name: rbenv }
+    - { name: ruby-build }
+
+- name: install homebrew-cask
+  homebrew: name=brew-cask state=latest
+
+- name: install brew cask packages
+  homebrew_cask: name={{ item.name }} state={{ item.state | default('installed') }}
+  with_items:
+    - { name: 1password }
+    - { name: appcleaner }
+    - { name: atom }
+    - { name: caffeine }
+    - { name: dash }
+    - { name: dropbox }
+    - { name: evernote }
+    - { name: flux }
+    - { name: google-chrome }
+    - { name: google-drive }
+    - { name: hub }
+    - { name: iterm2 }
+    - { name: mailbox }
+    - { name: sequel-pro }
+    - { name: skitch }
+    - { name: skype }
+    - { name: slack }
+    - { name: vagrant }
+    - { name: virtualbox }
+
+- name: start mysql at login
+  shell: brew services start mysql
