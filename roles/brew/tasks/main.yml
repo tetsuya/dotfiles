@@ -27,6 +27,7 @@
     - { name: atom }
     - { name: caffeine }
     - { name: dash }
+    - { name: day-o }
     - { name: dropbox }
     - { name: evernote }
     - { name: flux }
