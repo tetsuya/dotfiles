@@ -4,47 +4,48 @@
   with_items:
     - homebrew/services
     - caskroom/cask
+    - caskroom/versions
 
 - name: update homebrew
   homebrew: update_homebrew=yes upgrade_all=yes
 
 - name: install brew packages
-  homebrew: name={{ item.name }} state={{ item.state | default('latest') }} install_options={{ item.install_options | default() }}
+  homebrew: name={{ item }} state=latest
   with_items:
-    - { name: git }
-    - { name: mysql }
-    - { name: rbenv }
-    - { name: ruby-build }
-    - { name: tree }
+    - git
+    - mysql
+    - rbenv
+    - ruby
+    - tree
 
 - name: install homebrew-cask
   homebrew: name=brew-cask state=latest
 
 - name: install brew cask packages
-  homebrew_cask: name={{ item.name }} state={{ item.state | default('installed') }}
+  homebrew_cask: name={{ item }} state=installed
   with_items:
-    - { name: 1password }
-    - { name: airmail-beta }
-    - { name: appcleaner }
-    - { name: atom }
-    - { name: caffeine }
-    - { name: dash }
-    - { name: day-o }
-    - { name: dropbox }
-    - { name: evernote }
-    - { name: fliqlo }
-    - { name: flux }
-    - { name: google-chrome }
-    - { name: google-drive }
-    - { name: hub }
-    - { name: iterm2 }
-    - { name: sequel-pro }
-    - { name: skitch }
-    - { name: skype }
-    - { name: slack }
-    - { name: trailer }
-    - { name: vagrant }
-    - { name: virtualbox }
+    - 1password
+    - airmail-beta
+    - appcleaner
+    - atom
+    - caffeine
+    - dash
+    - day-o
+    - dropbox
+    - evernote
+    - fliqlo
+    - flux
+    - google-chrome
+    - google-drive
+    - hub
+    - iterm2
+    - sequel-pro
+    - skitch
+    - skype
+    - slack
+    - trailer
+    - vagrant
+    - virtualbox
 
 - name: start mysql at login
   shell: brew services start mysql
