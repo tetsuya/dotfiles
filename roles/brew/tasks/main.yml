@@ -15,6 +15,7 @@
     - { name: mysql }
     - { name: rbenv }
     - { name: ruby-build }
+    - { name: tree }
 
 - name: install homebrew-cask
   homebrew: name=brew-cask state=latest
@@ -23,6 +24,7 @@
   homebrew_cask: name={{ item.name }} state={{ item.state | default('installed') }}
   with_items:
     - { name: 1password }
+    - { name: airmail-beta }
     - { name: appcleaner }
     - { name: atom }
     - { name: caffeine }
@@ -30,16 +32,17 @@
     - { name: day-o }
     - { name: dropbox }
     - { name: evernote }
+    - { name: fliqlo }
     - { name: flux }
     - { name: google-chrome }
     - { name: google-drive }
     - { name: hub }
     - { name: iterm2 }
-    - { name: mailbox }
     - { name: sequel-pro }
     - { name: skitch }
     - { name: skype }
     - { name: slack }
+    - { name: trailer }
     - { name: vagrant }
     - { name: virtualbox }
 
