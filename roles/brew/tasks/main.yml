@@ -2,9 +2,11 @@
 - name: tap homebrew repositories
   homebrew_tap: tap={{ item }} state=present
   with_items:
-    - homebrew/services
+    - argon/mas
     - caskroom/cask
     - caskroom/versions
+    - homebrew/services
+    - thoughtbot/formulae
 
 - name: update homebrew
   homebrew: update_homebrew=yes upgrade_all=yes
@@ -12,37 +14,49 @@
 - name: install brew packages
   homebrew: name={{ item }} state=latest
   with_items:
+    - ansible
     - git
+    - heroku
+    - liftoff
+    - mas
     - mysql
+    - postgresql
+    - pyenv
     - rbenv
-    - ruby
+    - rmtrash
+    - ruby-build
     - tree
 
 - name: install brew cask packages
   homebrew_cask: name={{ item }} state=installed
   with_items:
     - 1password
-    - airmail-beta
+    - android-studio
     - appcleaner
     - atom
+    - bartender
     - caffeine
-    - dash
+    - cyberduck
     - day-o
+    - docker
     - dropbox
     - evernote
+    - firefox
     - fliqlo
     - flux
+    - font-inconsolata
     - google-chrome
-    - google-drive
-    - hub
     - iterm2
+    - java
+    - realm-browser
     - sequel-pro
     - skitch
     - skype
     - slack
-    - trailer
     - vagrant
     - virtualbox
+    - vivaldi
+    - vlc
 
 - name: start mysql at login
   shell: brew services start mysql
