@@ -18,9 +18,6 @@
     - ruby
     - tree
 
-- name: install homebrew-cask
-  homebrew: name=brew-cask state=latest
-
 - name: install brew cask packages
   homebrew_cask: name={{ item }} state=installed
   with_items:
