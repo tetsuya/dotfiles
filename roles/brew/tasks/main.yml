@@ -2,11 +2,7 @@
 - name: tap homebrew repositories
   homebrew_tap: tap={{ item }} state=present
   with_items:
-    - argon/mas
-    - caskroom/cask
-    - caskroom/versions
     - homebrew/services
-    - thoughtbot/formulae
 
 - name: update homebrew
   homebrew: update_homebrew=yes upgrade_all=yes
@@ -18,7 +14,7 @@
     - git
     - heroku
     - liftoff
-    - mas
+    - argon/mas/mas
     - mysql
     - postgresql
     - pyenv
