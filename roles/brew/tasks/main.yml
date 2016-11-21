@@ -15,40 +15,42 @@
     - heroku
     - argon/mas/mas
     - mysql
-    - postgresql
-    - pyenv
     - rbenv
     - rmtrash
     - ruby-build
     - tree
+    # - postgresql
+    # - pyenv
 
 - name: install brew cask packages
   homebrew_cask: name={{ item }} state=installed
   with_items:
     - 1password
-    - android-studio
     - appcleaner
     - atom
     - caffeine
-    - cyberduck
     - day-o
-    - docker
     - dropbox
-    - evernote
-    - firefox
     - fliqlo
     - flux
     - google-chrome
     - iterm2
-    - java
-    - realm-browser
     - sequel-pro
-    - skype
     - slack
-    - vagrant
-    - virtualbox
     - vivaldi
     - vlc
+    # - android-studio
+    # - cyberduck
+    # - docker
+    # - evernote
+    # - firefox
+    # - java
+    # - realm-browser
+    # - skitch
+    # - skype
+    # - vagrant
+    # - virtualbox
 
 - name: start mysql at login
   shell: brew services start mysql
+  # shell: brew services start postgresql
