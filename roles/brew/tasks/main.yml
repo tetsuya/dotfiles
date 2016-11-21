@@ -13,7 +13,6 @@
     - ansible
     - git
     - heroku
-    - liftoff
     - argon/mas/mas
     - mysql
     - postgresql
@@ -30,7 +29,6 @@
     - android-studio
     - appcleaner
     - atom
-    - bartender
     - caffeine
     - cyberduck
     - day-o
@@ -40,13 +38,11 @@
     - firefox
     - fliqlo
     - flux
-    - font-inconsolata
     - google-chrome
     - iterm2
     - java
     - realm-browser
     - sequel-pro
-    - skitch
     - skype
     - slack
     - vagrant
