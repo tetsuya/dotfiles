@@ -11,14 +11,16 @@
   homebrew: name={{ item }} state=latest
   with_items:
     - ansible
+    - argon/mas/mas
     - git
     - heroku
-    - argon/mas/mas
+    - legit
     - mysql
     - rbenv
     - rmtrash
     - ruby-build
     - tree
+    # - cocoapods
     # - postgresql
     # - pyenv
 
@@ -29,11 +31,13 @@
     - appcleaner
     - atom
     - caffeine
+    - cinch
     - day-o
     - dropbox
     - fliqlo
     - flux
     - google-chrome
+    - google-photos-backup
     - iterm2
     - sequel-pro
     - slack
@@ -45,6 +49,7 @@
     # - evernote
     # - firefox
     # - java
+    # - opensim
     # - realm-browser
     # - skitch
     # - skype
