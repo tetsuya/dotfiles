@@ -12,16 +12,17 @@
   with_items:
     - ansible
     - argon/mas/mas
+    - dark-mode
     - git
     - heroku
-    - legit
+    - jq
     - mysql
     - rbenv
     - rmtrash
     - ruby-build
     - tree
     # - cocoapods
-    # - postgresql
+    # - liftoff
     # - pyenv
 
 - name: install brew cask packages
@@ -34,28 +35,24 @@
     - cinch
     - day-o
     - dropbox
+    - firefox
     - fliqlo
     - flux
+    - font-source-code-pro
     - google-chrome
     - google-photos-backup
     - iterm2
     - sequel-pro
+    - skitch
     - slack
+    - vagrant
+    - virtualbox
     - vivaldi
     - vlc
     # - android-studio
-    # - cyberduck
-    # - docker
-    # - evernote
-    # - firefox
     # - java
     # - opensim
     # - realm-browser
-    # - skitch
-    # - skype
-    # - vagrant
-    # - virtualbox
 
 - name: start mysql at login
   shell: brew services start mysql
-  # shell: brew services start postgresql

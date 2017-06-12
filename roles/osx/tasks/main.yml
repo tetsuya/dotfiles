@@ -1,6 +1,6 @@
 ---
 - name: Set computer name (as done via System Preferences → Sharing)
-  sudo: yes
+  become: sudo
   command: "{{ item }}"
   with_items:
     - scutil --set ComputerName "mbp"

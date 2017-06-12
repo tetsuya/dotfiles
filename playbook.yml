@@ -2,8 +2,8 @@
 - hosts: localhost
   connection: local
   gather_facts: no
-  sudo: no
   roles:
     - brew
+    - mas
     - dotfile
     - osx
