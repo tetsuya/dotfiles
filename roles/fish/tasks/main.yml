@@ -1,0 +1,30 @@
+---
+- name: add fish path
+  lineinfile:
+    path: /etc/shells
+    line: '/usr/local/bin/fish'
+  become: yes
+- name: use fish as default shell
+  command: chsh -s /usr/local/bin/fish
+- name: make the fisherman directory
+  file:
+    path=~/.config/fish/functions
+    state=directory
+    mode=0755
+    recurse=yes
+- name: install fisherman
+  get_url:
+    url=https://git.io/fisher
+    dest=~/.config/fish/functions/fisher.fish
+- name: install plugins
+  command: /usr/local/bin/fish -c 'fisher install {{ item }}'
+  with_items:
+    - 0rax/fish-bd
+    - omf/plugin-balias
+    - fzf
+    - rbenv
+    - settitle
+    - simple
+    - z
+    - https://gist.github.com/tetsuya/c2a561dde2351023b8930bb18940913d # pwf.fish
+    - https://gist.github.com/tetsuya/0aa85bdf5a8b5318c08aadcbdc3ca78f # wifi.fish

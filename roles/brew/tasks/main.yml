@@ -13,8 +13,11 @@
     - ansible
     - argon/mas/mas
     - dark-mode
+    - fish
+    - fzf
     - git
     - heroku
+    - hub
     - jq
     - mysql
     - rbenv

@@ -1,28 +1,9 @@
 ---
-- name: copy .bash_aliases
-  copy: src=.bash_aliases dest=~/.bash_aliases
-  register: dot_bash_aliases
-
-- name: copy .bash_exports
-  copy: src=.bash_exports dest=~/.bash_exports
-  register: dot_bash_exports
-
-- name: copy .bash_profile
-  copy: src=.bash_profile dest=~/.bash_profile
-  register: dot_bash_profile
-
-- name: copy .bash_prompt
-  copy: src=.bash_prompt dest=~/.bash_prompt
-  register: dot_bash_prompt
-
 - name: copy .gitconfig
   copy: src=.gitconfig dest=~/.gitconfig
-  register: dot_gitconfig
 
 - name: copy .inputrc
   copy: src=.inputrc dest=~/.inputrc
-  register: dot_inputrc
 
-- name: load dotfile settings
-  shell: source ~/.bash_profile
-  when: dot_bash_aliases.changed or dot_bash_exports.changed or dot_bash_profile.changed or dot_bash_prompt.changed or dot_gitconfig.changed or dot_inputrc.changed
+- name: copy config.fish
+  copy: src=config.fish dest=~/.config/fish/config.fish

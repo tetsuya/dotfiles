@@ -1,0 +1,5 @@
+balias be 'bundle exec'
+balias bes 'bundle exec spring'
+balias git 'hub'
+balias ls 'ls -GAF'
+balias rm 'rmtrash'
