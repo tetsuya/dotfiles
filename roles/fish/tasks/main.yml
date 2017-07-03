@@ -8,14 +8,14 @@
   command: chsh -s /usr/local/bin/fish
 - name: make the fisherman directory
   file:
-    path=~/.config/fish/functions
-    state=directory
-    mode=0755
-    recurse=yes
+    path: ~/.config/fish/functions
+    state: directory
+    mode: 0755
+    recurse: yes
 - name: install fisherman
   get_url:
-    url=https://git.io/fisher
-    dest=~/.config/fish/functions/fisher.fish
+    url: https://git.io/fisher
+    dest: ~/.config/fish/functions/fisher.fish
 - name: install plugins
   command: /usr/local/bin/fish -c 'fisher install {{ item }}'
   with_items:

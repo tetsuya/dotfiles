@@ -1,14 +1,13 @@
 ---
 - name: tap homebrew repositories
-  homebrew_tap: tap={{ item }} state=present
-  with_items:
-    - homebrew/services
-
-- name: update homebrew
-  homebrew: update_homebrew=yes upgrade_all=yes
+  homebrew_tap:
+    name: homebrew/services
+    state: present
 
 - name: install brew packages
-  homebrew: name={{ item }} state=latest
+  homebrew:
+    name: "{{ item }}"
+    state: installed
   with_items:
     - ansible
     - argon/mas/mas
@@ -29,7 +28,9 @@
     # - pyenv
 
 - name: install brew cask packages
-  homebrew_cask: name={{ item }} state=installed
+  homebrew_cask:
+    name: "{{ item }}"
+    state: installed
   with_items:
     - 1password
     - appcleaner
@@ -48,6 +49,7 @@
     - sequel-pro
     - skitch
     - slack
+    - spotify
     - vagrant
     - virtualbox
     - vivaldi
