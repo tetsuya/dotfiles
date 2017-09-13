@@ -1,5 +1,6 @@
 balias be 'bundle exec'
 balias bes 'bundle exec spring'
+balias dc 'docker-compose'
 balias git 'hub'
 balias ls 'ls -GAF'
 balias rm 'rmtrash'
