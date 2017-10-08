@@ -10,7 +10,6 @@
     state: installed
   with_items:
     - ansible
-    - argon/mas/mas
     - dark-mode
     - fish
     - fzf
@@ -18,14 +17,12 @@
     - heroku
     - hub
     - jq
+    - mas
     - mysql
     - rbenv
     - rmtrash
     - ruby-build
     - tree
-    # - cocoapods
-    # - liftoff
-    # - pyenv
 
 - name: install brew cask packages
   homebrew_cask:
@@ -55,10 +52,6 @@
     - virtualbox
     - vivaldi
     - vlc
-    # - android-studio
-    # - java
-    # - opensim
-    # - realm-browser
 
 - name: start mysql at login
   shell: brew services start mysql
