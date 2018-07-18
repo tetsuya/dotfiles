@@ -1,4 +1,9 @@
 ---
+- name: copy .gemrc
+  copy:
+    src: .gemrc
+    dest: ~/.gemrc
+
 - name: copy .gitconfig
   copy:
     src: .gitconfig
