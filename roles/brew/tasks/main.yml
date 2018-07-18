@@ -18,7 +18,7 @@
     - hub
     - jq
     - mas
-    - mysql
+    - mysql@5.7
     - rbenv
     - rmtrash
     - ruby-build
@@ -40,9 +40,9 @@
     - firefox
     - fliqlo
     - flux
-    - font-source-code-pro
     - google-chrome
     - google-photos-backup
+    - homebrew/cask-fonts/font-source-code-pro
     - iterm2
     - sequel-pro
     - skitch
@@ -51,4 +51,4 @@
     - vlc
 
 - name: start mysql at login
-  shell: brew services start mysql
+  shell: brew services start mysql@5.7
