@@ -48,9 +48,6 @@
     - skitch
     - slack
     - spotify
-    - vagrant
-    - virtualbox
-    - vivaldi
     - vlc
 
 - name: start mysql at login
