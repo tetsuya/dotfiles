@@ -10,7 +10,6 @@
     state: installed
   with_items:
     - ansible
-    - dark-mode
     - fish
     - fzf
     - git
