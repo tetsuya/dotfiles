@@ -12,19 +12,17 @@
     state: directory
     mode: 0755
     recurse: yes
-- name: install fisherman
+- name: install fisher
   get_url:
     url: https://git.io/fisher
     dest: ~/.config/fish/functions/fisher.fish
-- name: install plugins
-  command: /usr/local/bin/fish -c 'fisher install {{ item }}'
+- name: add plugins
+  command: /usr/local/bin/fish -c 'fisher add {{ item }}'
   with_items:
     - 0rax/fish-bd
-    - omf/plugin-balias
-    - fzf
-    - rbenv
-    - settitle
-    - simple
-    - z
-    - https://gist.github.com/tetsuya/c2a561dde2351023b8930bb18940913d # pwf.fish
-    - https://gist.github.com/tetsuya/0aa85bdf5a8b5318c08aadcbdc3ca78f # wifi.fish
+    - daenney/rbenv
+    - jethrokuan/fzf
+    - jethrokuan/z
+    - oh-my-fish/plugin-osx
+    - oh-my-fish/plugin-wifi-password
+    - tetsuya/simple
