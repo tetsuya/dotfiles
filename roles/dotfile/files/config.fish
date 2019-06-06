@@ -1,5 +1,8 @@
 alias be="bundle exec"
+alias do="docker"
+alias dorm="dk rm (dk ps -a -f status=exited -q)"
 alias git="hub"
+alias ku="kubectl"
 alias ls="ls -GAF"
 alias pwf="pfd"
 alias rm="rmtrash"
