@@ -36,16 +36,16 @@
     - docker
     - dropbox
     - figma
-    - firefox
     - fliqlo
     - flux
     - google-chrome
     - google-photos-backup-and-sync
     - homebrew/cask-fonts/font-source-code-pro
+    - homebrew/cask-versions/firefox-developer-edition
     - imageoptim
+    - insomnia
     - iterm2
     - kindle
-    - postman
     - sequel-pro
     - skitch
     - skype
