@@ -13,11 +13,10 @@
     - fish
     - fzf
     - git
-    - heroku
+    - heroku/brew/heroku
     - hub
     - jq
     - mas
-    - mysql@5.7
     - rbenv
     - rmtrash
     - ruby-build
@@ -34,14 +33,14 @@
     - cinch
     - dash
     - day-o
-    - discord
     - docker
     - dropbox
+    - figma
     - firefox
     - fliqlo
     - flux
     - google-chrome
-    - google-photos-backup
+    - google-photos-backup-and-sync
     - homebrew/cask-fonts/font-source-code-pro
     - imageoptim
     - iterm2
@@ -54,10 +53,5 @@
     - spotify
     - the-unarchiver
     - trailer
-    - vagrant
-    - virtualbox
     - visual-studio-code
     - vlc
-
-- name: start mysql at login
-  shell: brew services start mysql@5.7
