@@ -8,3 +8,20 @@
   shell: |
     eval "$(ssh-agent)"
     ssh-add ~/.ssh/id_rsa
+
+- name: Check ruby installation
+  shell: rbenv versions | grep {{ ruby_version }}
+  register: ruby_installed
+  ignore_errors: yes
+
+- name: Install {{ ruby_version }}
+  shell: rbenv install {{ ruby_version }}
+  when: ruby_installed is failed
+
+- name: Set ruby {{ ruby_version }} as system
+  shell: rbenv global {{ ruby_version }}
+  when: ruby_installed is failed
+
+- name: Save settings
+  shell: rbenv rehash
+  when: ruby_installed is failed
