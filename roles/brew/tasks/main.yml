@@ -21,6 +21,7 @@
     - rmtrash
     - ruby-build
     - tree
+    - yarn
 
 - name: install brew cask packages
   homebrew_cask:
