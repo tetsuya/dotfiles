@@ -17,6 +17,7 @@
     - hub
     - jq
     - mas
+    - mysql-client
     - rbenv
     - rmtrash
     - ruby-build
