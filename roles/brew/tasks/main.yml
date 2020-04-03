@@ -19,6 +19,7 @@
     - jq
     - mas
     - mysql-client
+    - postgresql
     - rbenv
     - rmtrash
     - ruby-build
