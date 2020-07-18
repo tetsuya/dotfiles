@@ -25,3 +25,6 @@
 - name: Save settings
   shell: rbenv rehash
   when: ruby_installed is failed
+
+- name: Set gh alias
+  shell: gh alias set open 'repo view -w'
