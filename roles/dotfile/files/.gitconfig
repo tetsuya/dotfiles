@@ -1,10 +1,23 @@
 [user]
-  name = tetsuya
+  name = Tetsuya Kaneko
   email = tetsuya@users.noreply.github.com
 [alias]
+  a = add
+  b = branch
+  c = commit
+  ca = !git commit --amnend
+  car = !git commit --amend --reset-author
   co = checkout
-  logs = log --name-status --pretty=fuller
+  d = diff
+  l = log
+  ls = log --name-status --pretty=fuller
+  p = !git push origin $(git rev-parse --abbrev-ref HEAD)
+  r = reset
+  rh = !git reset --hard
+  rs = !git reset --soft
+  s = status
+  st = stash
+  syncm = !git co main && git pull --rebase origin main && git fetch -p origin && git branch -d $(git branch --merged | grep -v main | grep -v '*')
   syncd = !git co develop && git pull --rebase origin develop && git fetch -p origin && git branch -d $(git branch --merged | grep -v develop | grep -v '*')
-  syncm = !git co master && git pull --rebase origin master && git fetch -p origin && git branch -d $(git branch --merged | grep -v master | grep -v '*')
 [core]
 	editor = code --wait
