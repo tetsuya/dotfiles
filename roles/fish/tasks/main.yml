@@ -26,7 +26,7 @@
     - jethrokuan/z
     - oh-my-fish/plugin-osx
     - oh-my-fish/plugin-wifi-password
-    - tetsuya/simple
+    - simnalamburt/shellder
 - name: add docker completions
   get_url:
     url: https://raw.githubusercontent.com/docker/cli/master/contrib/completion/fish/docker.fish
