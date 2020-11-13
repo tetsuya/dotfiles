@@ -31,6 +31,7 @@
     state: installed
   with_items:
     - 1password
+    - android-studio
     - appcleaner
     - caffeine
     - cinch
@@ -41,7 +42,9 @@
     - figma
     - firefox
     - fliqlo
+    - flutter
     - flux
+    - font-source-code-pro
     - google-chrome
     - google-photos-backup-and-sync
     - homebrew/cask-fonts/font-source-code-pro
@@ -49,9 +52,10 @@
     - insomnia
     - iterm2
     - kindle
+    - notion
+    - postico
     - sequel-pro
     - skitch
-    - skype
     - slack
     - spotify
     - the-unarchiver
