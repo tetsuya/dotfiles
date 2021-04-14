@@ -31,11 +31,10 @@
     state: installed
   with_items:
     - 1password
-    - android-studio
     - appcleaner
     - caffeine
     - cinch
-    - dash
+    - cloudflare-warp
     - day-o
     - docker
     - dropbox
@@ -53,12 +52,10 @@
     - iterm2
     - kindle
     - notion
-    - postico
-    - sequel-pro
     - skitch
     - slack
     - spotify
     - the-unarchiver
-    - trailer
+    - tweetbot
     - visual-studio-code
     - vlc
