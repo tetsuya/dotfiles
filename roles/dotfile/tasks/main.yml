@@ -14,6 +14,11 @@
     src: .inputrc
     dest: ~/.inputrc
 
+- name: copy .psqlrc
+  copy:
+    src: .psqlrc
+    dest: ~/.psqlrc
+
 - name: copy config.fish
   copy:
     src: config.fish
