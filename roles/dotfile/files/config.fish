@@ -24,6 +24,7 @@ alias wifi="wifi-password"
 
 set --global LANG en_US.UTF-8
 set --global LC_ALL en_US.utf-8
+set --global pure_symbol_prompt "\$"
 
 # mysql-client
 set --global fish_user_paths "/usr/local/opt/mysql-client/bin" $fish_user_paths
