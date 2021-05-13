@@ -17,8 +17,8 @@
     url: https://git.io/fisher
     dest: ~/.config/fish/functions/fisher.fish
 - name: add plugins
-  command: /usr/local/bin/fish -c 'fisher add {{ item }}'
-  with_items:
+  ansible.builtin.command: /usr/local/bin/fish -c fisher install {{ item }}
+  loop:
     - 0rax/fish-bd
     - daenney/rbenv
     - evanlucas/fish-kubectl-completions
