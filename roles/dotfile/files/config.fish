@@ -42,6 +42,3 @@ set --global pure_symbol_prompt "\$"
 set --global fish_user_paths "/usr/local/opt/mysql-client/bin" $fish_user_paths
 set --global LDFLAGS "-L/usr/local/opt/mysql-client/lib"
 set --global CPPFLAGS "-I/usr/local/opt/mysql-client/include"
-
-# python
-pyenv init - | source
