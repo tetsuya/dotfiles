@@ -18,9 +18,11 @@ abbr -a gsh git stash
 alias be="bundle exec"
 alias bi="bundle install"
 alias ls="ls -GAF"
-alias pwf="pfd"
-alias rm="rmtrash"
 alias wifi="wifi-password"
+
+# oh-my-fish/plugin-osx
+alias pwf="pfd"
+alias rm="trash"
 
 set --global LANG en_US.UTF-8
 set --global LC_ALL en_US.utf-8

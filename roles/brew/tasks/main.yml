@@ -19,7 +19,6 @@
       - mysql-client
       - postgresql
       - rbenv
-      - rmtrash
       - ruby-build
       - tree
       - yarn
