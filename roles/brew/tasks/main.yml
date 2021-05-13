@@ -6,56 +6,54 @@
 
 - name: install brew packages
   homebrew:
-    name: "{{ item }}"
     state: installed
-  with_items:
-    - ansible
-    - fish
-    - fzf
-    - git
-    - github/gh/gh
-    - heroku/brew/heroku
-    - jq
-    - mas
-    - mysql-client
-    - postgresql
-    - rbenv
-    - rmtrash
-    - ruby-build
-    - tree
-    - yarn
+    name:
+      - ansible
+      - fish
+      - fzf
+      - git
+      - github/gh/gh
+      - heroku/brew/heroku
+      - jq
+      - mas
+      - mysql-client
+      - postgresql
+      - rbenv
+      - rmtrash
+      - ruby-build
+      - tree
+      - yarn
 
 - name: install brew cask packages
   homebrew_cask:
-    name: "{{ item }}"
     state: installed
-  with_items:
-    - 1password
-    - appcleaner
-    - caffeine
-    - cinch
-    - cloudflare-warp
-    - day-o
-    - docker
-    - dropbox
-    - figma
-    - firefox
-    - fliqlo
-    - flutter
-    - flux
-    - font-source-code-pro
-    - google-chrome
-    - google-photos-backup-and-sync
-    - homebrew/cask-fonts/font-source-code-pro
-    - imageoptim
-    - insomnia
-    - iterm2
-    - kindle
-    - notion
-    - skitch
-    - slack
-    - spotify
-    - the-unarchiver
-    - tweetbot
-    - visual-studio-code
-    - vlc
+    name:
+      - 1password
+      - appcleaner
+      - caffeine
+      - cinch
+      - cloudflare-warp
+      - day-o
+      - docker
+      - dropbox
+      - figma
+      - firefox
+      - fliqlo
+      - flutter
+      - flux
+      - font-source-code-pro
+      - google-chrome
+      - google-photos-backup-and-sync
+      - homebrew/cask-fonts/font-source-code-pro
+      - imageoptim
+      - insomnia
+      - iterm2
+      - kindle
+      - notion
+      - skitch
+      - slack
+      - spotify
+      - the-unarchiver
+      - tweetbot
+      - visual-studio-code
+      - vlc
