@@ -7,24 +7,26 @@ $ git clone https://github.com/tetsuya/kochiku.git && cd kochiku
 $ sh bootstrap.sh
 ```
 
-### Add a new SSH key to GitHub account
+## Sync other files and settings
+
+### VS Code Settings
+
+* Login using GitHub account. See [Settings Sync in Visual Studio Code](https://code.visualstudio.com/docs/editor/settings-sync) more details.
+
+### fish history
+
+* Copy `~/.local/share/fish/fish_history` to the new machine. See [history file location · Issue #862 · fish-shell/fish-shell](https://github.com/fish-shell/fish-shell/issues/862) for more details.
+
+## Authentications
+
+### Authenticate with a GitHub account
 
 ```
-$ pbcopy < ~/.ssh/id_rsa.pub
+$ gh auth login
 ```
 
-Then visit [SSH and GPG keys](https://github.com/settings/keys) page on GitHub.
-
-### Setup MySQL
+### Authenticate with a Heroku account
 
 ```
-$ docker run \
-    --publish 3306:3306 \
-    --name mysql5.7 \
-    --env MYSQL_ROOT_PASSWORD=foobar \
-    --restart=always \
-    --detach \
-    mysql:5.7 \
-    --character-set-server=utf8mb4 \
-    --collation-server=utf8mb4_unicode_ci
+$ heroku login
 ```
