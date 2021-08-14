@@ -1,3 +1,5 @@
+fish_add_path /opt/homebrew/bin
+
 abbr -a c code
 abbr -a d docker
 abbr -a h heroku
