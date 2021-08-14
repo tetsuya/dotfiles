@@ -32,18 +32,14 @@
       - caffeine
       - cinch
       - cloudflare-warp
-      - day-o
+      - discord
       - docker
-      - dropbox
       - figma
       - firefox
       - fliqlo
       - flutter
       - flux
-      - font-source-code-pro
       - google-chrome
-      - google-photos-backup-and-sync
-      - homebrew/cask-fonts/font-source-code-pro
       - imageoptim
       - insomnia
       - iterm2
@@ -51,7 +47,6 @@
       - notion
       - skitch
       - slack
-      - spotify
       - the-unarchiver
       - tweetbot
       - visual-studio-code
