@@ -2,8 +2,6 @@
 - hosts: localhost
   connection: local
   gather_facts: no
-  vars:
-    ruby_version: 2.6.5
   roles:
     - brew
     - mas
