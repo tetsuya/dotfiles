@@ -29,6 +29,7 @@ abbr -a gss git stash show
 
 alias be="bundle exec"
 alias bi="bundle install"
+alias cat="bat"
 alias ls="ls -GAF"
 alias wifi="wifi-password"
 
@@ -39,8 +40,3 @@ alias rm="trash"
 set --global LANG en_US.UTF-8
 set --global LC_ALL en_US.utf-8
 set --global pure_symbol_prompt "\$"
-
-# mysql-client
-set --global fish_user_paths "/usr/local/opt/mysql-client/bin" $fish_user_paths
-set --global LDFLAGS "-L/usr/local/opt/mysql-client/lib"
-set --global CPPFLAGS "-I/usr/local/opt/mysql-client/include"

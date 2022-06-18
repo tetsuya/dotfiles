@@ -9,6 +9,10 @@
     state: installed
     name:
       - ansible
+      - bat
+      - bitrise
+      - cocoapods
+      - dart
       - fish
       - fzf
       - git
@@ -16,7 +20,6 @@
       - heroku/brew/heroku
       - jq
       - mas
-      - mysql-client
       - postgresql
       - rbenv
       - ruby-build
@@ -29,11 +32,13 @@
     name:
       - 1password
       - appcleaner
+      - arctype
       - caffeine
       - cinch
       - cloudflare-warp
       - discord
       - docker
+      - dropbox
       - figma
       - firefox
       - fliqlo
@@ -45,9 +50,11 @@
       - iterm2
       - kindle
       - notion
+      - numi
       - skitch
       - slack
       - the-unarchiver
+      - tradingview
       - tweetbot
       - visual-studio-code
       - vlc
