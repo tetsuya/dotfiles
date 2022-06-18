@@ -1,2 +1,0 @@
-- name: Set gh alias
-  shell: gh alias set open 'repo view -w'

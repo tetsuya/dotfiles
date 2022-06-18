@@ -1,8 +1,0 @@
----
-- name: install mac store applications
-  command: mas install {{ item.id }}
-  with_items:
-    - name: Keynote
-      id: 409183694
-    - name: LINE
-      id: 539883307

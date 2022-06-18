@@ -4,7 +4,13 @@
 
 ```
 $ git clone https://github.com/tetsuya/kochiku.git && cd kochiku
-$ sh bootstrap.sh
+$ sh install.sh
+```
+
+Start a new session and run
+
+```
+$ fish setup.fish
 ```
 
 ## Sync other files and settings
@@ -15,7 +21,7 @@ $ sh bootstrap.sh
 
 ### fish history
 
-* Copy `~/.local/share/fish/fish_history` to the new machine. See [history file location · Issue #862 · fish-shell/fish-shell](https://github.com/fish-shell/fish-shell/issues/862) for more details.
+* Copy `~/.local/share/fish/fish_history` to the new machine. See [history file location · Issue #862](https://github.com/fish-shell/fish-shell/issues/862) for more details.
 
 ## Authentications
 
