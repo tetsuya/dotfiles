@@ -1,9 +1,9 @@
-# tetsuya/kochiku
+# tetsuya/dotfiles
 
 ## Usage
 
 ```
-$ git clone https://github.com/tetsuya/kochiku.git && cd kochiku
+$ git clone https://github.com/tetsuya/dotfiles.git && cd dotfiles
 $ sh install.sh
 ```
 
