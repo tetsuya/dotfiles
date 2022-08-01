@@ -1,10 +1,11 @@
 fish_add_path /opt/homebrew/bin
+fish_add_path $HOME/.pub-cache/bin
 
 abbr -a c code
 abbr -a d docker
 abbr -a h heroku
 
-abbr -a f flutter
+abbr -a f fvm flutter
 abbr -a g git
 abbr -a ga git add
 abbr -a gb git branch
@@ -28,7 +29,7 @@ abbr -a gsh git stash
 abbr -a gsl git stash list
 abbr -a gsp git stash pop
 abbr -a gss git stash show
-abbr -a pub flutter pub
+abbr -a pub fvm flutter pub
 
 alias be="bundle exec"
 alias bi="bundle install"
