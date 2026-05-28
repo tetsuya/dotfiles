@@ -1,38 +1,25 @@
 # tetsuya/dotfiles
 
-## Usage
+Sets up a new Mac with Homebrew packages, fish shell, and macOS preferences.
 
-```
-$ git clone https://github.com/tetsuya/dotfiles.git && cd dotfiles
-$ sh install.sh
-```
+## Install
 
-Start a new session and run
-
-```
-$ fish setup.fish
+```sh
+git clone https://github.com/tetsuya/dotfiles.git && cd dotfiles
+sh install.sh
 ```
 
-## Sync other files and settings
+This will:
+- Install Homebrew if not present
+- Install packages and apps via `Brewfile`
+- Set fish as the default shell and configure it
+- Symlink `.gitconfig`
+- Apply macOS preferences
 
-### VS Code Settings
+## After install
 
-* Login using GitHub account. See [Settings Sync in Visual Studio Code](https://code.visualstudio.com/docs/editor/settings-sync) more details.
+Start a new terminal session for fish to take effect, then authenticate:
 
-### fish history
-
-* Copy `~/.local/share/fish/fish_history` to the new machine. See [history file location · Issue #862](https://github.com/fish-shell/fish-shell/issues/862) for more details.
-
-## Authentications
-
-### Authenticate with a GitHub account
-
-```
-$ gh auth login
-```
-
-### Authenticate with a Heroku account
-
-```
-$ heroku login
+```sh
+gh auth login
 ```

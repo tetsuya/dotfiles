@@ -5,4 +5,4 @@
   syncm = !git co main && git pull --rebase origin main && git fetch -p origin && git branch -d $(git branch --merged | grep -v main | grep -v '*')
   syncd = !git co develop && git pull --rebase origin develop && git fetch -p origin && git branch -d $(git branch --merged | grep -v develop | grep -v '*')
 [core]
-	editor = code --wait
+	editor = kiro --wait

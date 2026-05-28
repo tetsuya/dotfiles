@@ -1,9 +1,8 @@
-# Set computer name (as done via System Preferences -> Sharing)
-sudo scutil --set ComputerName "Mac mini"
-sudo scutil --set HostName "Mac mini"
-
-# Autohide Dock
+# Enable Dock auto-hide
 defaults write com.apple.dock autohide -bool true
 
-# Disable the drop-shadow on screenshots
+# Disable screenshot drop shadow
 defaults write com.apple.screencapture disable-shadow -bool true
+
+# Restart processes to apply changes
+killall cfprefsd SystemUIServer Dock

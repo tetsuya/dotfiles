@@ -1,12 +1,5 @@
-fish_add_path /opt/homebrew/bin
-fish_add_path $HOME/.pub-cache/bin
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
-abbr -a c code
-abbr -a d docker
-abbr -a h heroku
-
-abbr -a f fvm flutter
-abbr -a g git
 abbr -a ga git add
 abbr -a gb git branch
 abbr -a gc git commit
@@ -29,10 +22,7 @@ abbr -a gsh git stash
 abbr -a gsl git stash list
 abbr -a gsp git stash pop
 abbr -a gss git stash show
-abbr -a pub fvm flutter pub
 
-alias be="bundle exec"
-alias bi="bundle install"
 alias cat="bat"
 alias ls="ls -GAF"
 alias wifi="wifi-password"
@@ -41,6 +31,8 @@ alias wifi="wifi-password"
 alias pwf="pfd"
 alias rm="trash"
 
-set --global LANG en_US.UTF-8
-set --global LC_ALL en_US.utf-8
+set --global --export LANG en_US.UTF-8
+set --global --export LC_ALL en_US.utf-8
+set --global --export EDITOR kiro
+
 set --global pure_symbol_prompt "\$"
