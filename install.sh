@@ -32,6 +32,10 @@ $FISH_BIN -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/mai
 rm -rf $HOME/.config/fish/fish_plugins && ln -s $DOTFILES_DIR/fish_plugins $HOME/.config/fish/fish_plugins
 rm -rf $HOME/.config/fish/config.fish  && ln -s $DOTFILES_DIR/config.fish  $HOME/.config/fish/config.fish
 
+# Set up Ghostty configuration
+mkdir -p $HOME/.config/ghostty
+rm -rf $HOME/.config/ghostty/config.ghostty && ln -s $DOTFILES_DIR/config.ghostty $HOME/.config/ghostty/config.ghostty
+
 $FISH_BIN -c 'fisher update'
 
 # Set macOS preferences
